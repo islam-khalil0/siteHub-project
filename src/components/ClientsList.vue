@@ -64,9 +64,9 @@ const cancelDelete = () => {
       </TableCaption>
       <TableHeader>
         <TableRow>
-          <TableHead>client name</TableHead>
+          <TableHead>Client Name</TableHead>
           <TableHead>Phone</TableHead>
-          <TableHead>notes</TableHead>
+          <TableHead>Notes</TableHead>
           <TableHead>Actions</TableHead>
         </TableRow>
       </TableHeader>
@@ -100,7 +100,8 @@ const cancelDelete = () => {
         <DialogHeader>
           <DialogTitle>Delete Client</DialogTitle>
           <DialogDescription>
-            When you delete a client, all of that client's websites will be deleted. Are you sure you want to delete {{ clientToDelete?.client_name }}?
+            When you delete a client, all of that client's websites will be deleted. Are you sure you want to delete {{
+              clientToDelete?.client_name }}?
             This action cannot be undone.
           </DialogDescription>
         </DialogHeader>

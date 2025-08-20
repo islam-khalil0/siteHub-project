@@ -46,12 +46,9 @@ const getStatusClasses = (status) => {
 <template>
   <div class="rounded-md border">
     <Table>
-      <!-- Table Caption -->
-      <TableCaption v-if="!websites.length && !loading">
+      <TableCaption v-if="websites.length === 0 && !loading">
         No websites found.
       </TableCaption>
-
-      <!-- Table Header -->
       <TableHeader>
         <TableRow>
           <TableHead>Website Name</TableHead>
@@ -64,17 +61,12 @@ const getStatusClasses = (status) => {
           <TableHead>Actions</TableHead>
         </TableRow>
       </TableHeader>
-
-      <!-- Table Body -->
       <TableBody>
-        <!-- Loading State -->
         <TableRow v-if="loading">
           <TableCell colspan="8" class="text-center">
             <Loader2 class="w-8 h-8 mx-auto animate-spin" />
           </TableCell>
         </TableRow>
-
-        <!-- Website Rows -->
         <TableRow v-for="website in websites" :key="website.id">
           <TableCell>{{ website.website_name }}</TableCell>
           <TableCell>{{ getClientName(website) }}</TableCell>
